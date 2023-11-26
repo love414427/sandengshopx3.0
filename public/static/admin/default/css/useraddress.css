@@ -1,0 +1,24 @@
+/**
+ * 地址添加/编辑
+ */
+.user-address-idcard-images ul li {
+    margin: 0;
+}
+@media only screen and (min-width: 641px) {
+    .user-address-idcard-images ul li,
+    .user-address-idcard-images .plug-file-upload-submit {
+        width: 20rem;
+    }
+    .user-address-idcard-images ul li {
+        height: 13.2rem;
+    }
+}
+@media only screen and (max-width: 640px) {
+    .user-address-idcard-images ul li,
+    .user-address-idcard-images .plug-file-upload-submit {
+        width: 12.8rem;
+    }
+    .user-address-idcard-images ul li {
+        height: 8.5rem;
+    }
+}

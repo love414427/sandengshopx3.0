@@ -1,0 +1,13 @@
+.content-right .am-panel {
+    position: relative;
+}
+.content-right .am-panel .cache-submit {
+    width: 7rem;
+    height: 3.3rem;
+    position: absolute;
+    top: -0.1rem;
+    right: -0.1rem;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}

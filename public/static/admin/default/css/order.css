@@ -1,0 +1,37 @@
+/**
+* 虚拟销售-密钥信息
+*/
+.fictitious-container {
+    margin-top: 0 !important;
+}
+.fictitious-container li .am-u-sm-2 {
+    width: 6rem;
+    padding: 0;
+}
+.fictitious-container li .am-u-sm-10 {
+    width: calc(100% - 6rem);
+    padding: 0;
+}
+.fictitious-container li img {
+    max-width: 4rem;
+}
+.fictitious-container li {
+    border-color: #eee;
+}
+.fictitious-container li:first-child {
+    border-top: 0;
+    padding-top: 0;
+}
+.fictitious-container li:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+/**
+* 取货
+*/
+.form-validation-take .common-scan-submit {
+    padding: 1.6rem 0.5rem;
+    left: 0 !important;
+    top: 0 !important;
+}

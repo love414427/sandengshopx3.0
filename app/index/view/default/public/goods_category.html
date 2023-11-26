@@ -1,0 +1,89 @@
+<!-- 商品分类  -->
+<div id="goods-category" class="am-container am-hide-sm-only am-hide-md-only" data-controller-name="{{$controller_name}}">
+    <div class="goods-category-s">
+        {{if MyC('home_main_header_status', 1) eq 1}}
+            <a href="{{:MyUrl('index/category/index')}}">
+                <div class="goods-category-title">
+                    <span class="all-goods">{{:MyLang('common.all_category_text')}}</span>
+                </div>
+            </a>
+        {{/if}}
+        <div class="category-content" {{if (isset($common_goods_category_hidden) and $common_goods_category_hidden eq 1)}}style="display:none;"{{/if}}>
+            <div class="category">
+                <ul class="category-list">
+                    {{if !empty($goods_category_list) and is_array($goods_category_list)}}
+                        {{foreach $goods_category_list as $k=>$v}}
+                            <li class="first" data-index="{{$k}}">
+                                {{if $category_show_level gt 1}}
+                                    <img class="category-fillet-top am-hide" src="{{$attachment_host}}/static/index/{{$default_theme}}/images/corner_round_top.png" />
+                                    <img class="category-fillet-bottom am-hide" src="{{$attachment_host}}/static/index/{{$default_theme}}/images/corner_round_bottom.png" />
+                                {{/if}}
+                                <a href="{{:MyUrl('index/search/index', ['cid'=>$v['id']])}}" class="am-block">
+                                <div class="category-info">
+                                    <h3 class="category-name b-category-name am-text-truncate">
+                                        {{if !empty($v['icon'])}}
+                                            <img class="category-menu-img" src="{{$v.icon}}" />
+                                            <img class="category-menu-img-active" src="{{if empty($v.icon_active)}}{{$v.icon}}{{else/}}{{$v.icon_active}}{{/if}}" />
+                                        {{/if}}
+                                        <span class="bd-name">{{$v.name}}</span>
+                                    </h3>
+                                    <i class="am-icon-angle-right"></i>
+                                </div>
+                                </a>
+                                {{if $category_show_level gt 1}}
+                                    <div class="menu-item menu-in top">
+                                        {{if !empty($v['items'])}}
+                                            <div class="area-in">
+                                                <div class="area-bg">
+                                                    <div class="menu-srot">
+                                                        <div class="sort-side {{if $category_show_level eq 2}}am-flex-row{{elseif $category_show_level eq 3}}am-flex-col{{/if}}">
+                                                            {{foreach $v.items as $vs}}
+                                                                {{if $category_show_level eq 2}}
+                                                                    <dl class="dl-sort {{if $category_show_level eq 2}}dl-sort-two{{/if}}">
+                                                                        <dd >
+                                                                            <a href="{{:MyUrl('index/search/index', ['cid'=>$vs['id']])}}">
+                                                                                {{if !empty($vs['icon'])}}
+                                                                                    <img src="{{$vs.icon}}" width="50" />
+                                                                                {{/if}}
+                                                                                <span>{{$vs.name}}</span>
+                                                                            </a>
+                                                                        </dd>
+                                                                    </dl>
+                                                                {{elseif $category_show_level eq 3}}
+                                                                    <div class="category-show-level3">
+                                                                        <div class="category-show-level3-title">
+                                                                            <a href="{{:MyUrl('index/search/index', ['cid'=>$vs['id']])}}">
+                                                                                <span>{{$vs.name}}</span>
+                                                                            </a>
+                                                                        </div>
+                                                                        {{if !empty($vs['items'])}}
+                                                                            <div class="category-show-level3-child">
+                                                                                {{foreach $vs.items as $vss}}
+                                                                                    <div>
+                                                                                        <a href="{{:MyUrl('index/search/index', ['cid'=>$vss['id']])}}">
+                                                                                            <span>{{$vss.name}}</span>
+                                                                                        </a>
+                                                                                    </div>
+                                                                                {{/foreach}}
+                                                                            </div>
+                                                                        {{/if}}
+                                                                    </div>
+                                                                {{/if}}
+                                                            {{/foreach}}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        {{else /}}
+                                            {{include file="public/not_data" /}}
+                                        {{/if}}
+                                    </div>
+                                {{/if}}
+                            </li>
+                        {{/foreach}}
+                    {{/if}}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

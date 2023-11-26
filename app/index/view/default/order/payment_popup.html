@@ -1,0 +1,46 @@
+<div class="am-popup am-radius" id="order-pay-popup" data-is-auto="{{if isset($params['is_pay_auto']) and $params['is_pay_auto'] eq 1}}1{{else /}}0{{/if}}" data-is-pay="{{if isset($params['is_pay_submit']) and $params['is_pay_submit'] eq 1}}1{{else /}}0{{/if}}">
+    <div class="am-popup-inner">
+        <div class="am-popup-hd">
+            <h4 class="am-popup-title">{{:MyLang('order.form_payment_title')}}</h4>
+            <span data-am-modal-close class="am-close">&times;</span>
+        </div>
+        <div class="am-popup-bd">
+            <form class="am-form pay-form am-form-popup-fixed" method="post" action="{{:MyUrl('index/order/pay')}}">
+                <div class="business-list business-list-nbfc">
+                    {{if !empty($buy_payment_list)}}
+                        <ul class="am-avg-sm-2 am-avg-md-3 payment-list" data-type="payment">
+                            {{foreach $buy_payment_list as $payment}}
+                                <li class="am-padding-sm" data-value="{{$payment.id}}">
+                                    <div class="business-item am-nbfc am-padding-sm am-radius">
+                                        {{if !empty($payment.logo)}}
+                                            <img src="{{$payment.logo}}" class="am-radius" />
+                                        {{/if}}
+                                        <span>{{$payment.name}}</span>
+                                        <i class="iconfont icon-subscript"></i>
+                                    </div>
+                                </li>
+                            {{/foreach}}
+                        </ul>
+                    {{else /}}
+                        <div class="table-no">
+                            <i class="am-icon-skyatlas am-icon-lg"></i>
+                            <p>{{:MyLang('order.form_payment_no_data_tips')}}</p>
+                        </div>
+                    {{/if}}
+                </div>
+                <div class="am-form-popup-submit">
+                    <input type="hidden" name="ids" value="{{if !empty($pay_params['order_ids'])}}{{$pay_params.order_ids}}{{/if}}" />
+                    <input type="hidden" name="payment_id" value="{{if !empty($pay_params['payment_id'])}}{{$pay_params.payment_id}}{{/if}}" />
+                    <button type="button" class="am-btn am-btn-warning am-radius am-btn-xs btn-loading-example am-margin-right-lg" data-am-modal-close>
+                        <i class="am-icon-paint-brush"></i>
+                        <span>{{:MyLang('cancel_title')}}</span>
+                    </button>
+                    <button type="submit" class="am-btn am-btn-primary am-radius am-btn-xs btn-loading-example" data-am-loading="{spinner: 'circle-o-notch', loadingText:'{{:MyLang('confirm_payment_title')}}'}">
+                        <i class="am-icon-paypal"></i>
+                        <span>{{:MyLang('confirm_payment_title')}}</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

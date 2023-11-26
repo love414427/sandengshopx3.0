@@ -1,0 +1,14 @@
+/**
+ * 底部内容处理
+ */
+.footer-nav-content,
+.friendship-list {
+	display: none;
+}
+.am-footer-default,
+.am-footer-miscs > .am-container {
+	border-top: 0;
+}
+.am-footer-default {
+    background: var(--body-bg-color);
+}

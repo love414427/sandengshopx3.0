@@ -1,0 +1,617 @@
+/**
+ * 选项卡切换
+ */
+.renovation-tabs .am-active {
+    border-bottom: 0.2rem solid transparent !important;
+    background: #fff;
+}
+.renovation-tabs .am-tabs-bd {
+    z-index: 1;
+    position: static;
+    border-width: 0;
+}
+.renovation-tabs li {
+    margin-bottom: -0.3rem !important;
+}
+.renovation-tabs li a {
+    margin-right: 0;
+}
+.renovation-tabs li:not(.am-active) a:hover {
+    border-color: transparent !important;
+}
+.renovation-tabs.am-sticky {
+    background: #fff;
+    border: 0.1rem solid #eee;
+    border-top: 0;
+    -webkit-box-shadow: 0 0.3rem 0.5rem rgb(0 0 0 / 5%);
+    box-shadow: 0 0.3rem 0.5rem rgb(0 0 0 / 5%);
+    padding: 0.5rem;
+}
+
+/**
+ * 页面选择自定义url
+ */
+.pages-custom-url-container > .am-input-group:not(:first-child) {
+    margin-top: 0.5rem;
+}
+.pages-custom-url-container > .am-input-group button {
+    width: 10rem;
+}
+
+/**
+ * 拖放模块
+ */
+.structure-drag button {
+    cursor: move !important;
+}
+
+/**
+ * 布局容器-提示
+ */
+.layout-container {
+    border: 0.1rem solid rgba(0,0,0,.04);
+}
+.layout-container .layout-container-tips {
+    border: 0.1rem dashed #ccc;
+    color: #999;
+    padding: 2rem;
+    text-align: center;
+}
+.layout-container .layout-container-tips:hover,
+.layout-container .layout-container-tips.layout-view-dragenter {
+    border: 0.1rem dashed #2196f3;
+    color: #2196f3;
+}
+
+/**
+ * 布局-基础
+ */
+.layout-content-submit .am-switch,
+.layout-content-submit .am-btn:not(:last-child),
+.module-view-submit-container .am-btn:not(:last-child) {
+    margin-right: 0.2rem !important;
+}
+
+/**
+ * 布局容器-内容
+ */
+.layout-view .drag-submit {
+    background: #e6e6e6;
+    cursor: move !important;
+    text-align: right;
+    padding: 0.3rem;
+    left: 0;
+    top: -2.8rem;
+    width: 100%;
+    -webkit-box-shadow: 0 -0.5rem 1rem rgb(0 0 0 / 60%);
+    box-shadow: 0 -0.5rem 1rem rgb(0 0 0 / 20%);
+}
+.layout-view .layout-submit {
+    padding: 0.2rem 0.5rem;
+}
+.layout-view .drag-submit .am-switch-handle-on,
+.layout-view .drag-submit .am-switch-handle-off,
+.layout-view .drag-submit .am-switch-label {
+    padding: 0.3rem 0.5rem;
+}
+.layout-content {
+    border: 0.1rem dashed rgb(244 244 244 / 50%);
+}
+.layout-content:hover {
+    border-color: #666;
+}
+.layout-content-tips {
+    color: #ccc;
+    text-align: center;
+    padding: 1rem;
+}
+.layout-content-tips:hover,
+.layout-content-dragenter .layout-content-tips {
+    color: #666;
+}
+.layout-view,
+.layout-content-container,
+.layout-content-children,
+.module-view {
+    position: sticky;
+}
+.layout-content-children > [class^="am-u-md"] {
+    padding: 0;
+}
+.layout-view .drag-submit,
+.layout-content-submit-container,
+.module-view-submit-container {
+    position: absolute;
+    z-index: 1;
+    display: none;
+}
+.layout-content-submit-container .am-btn,
+.module-view-submit-container .am-btn {
+    -webkit-box-shadow: 0 0.3rem 0.5rem rgb(0 0 0 / 30%);
+    box-shadow: 0 0.3rem 0.5rem rgb(0 0 0 / 30%);
+}
+.layout-content-submit-container {
+    top: 0;
+    right: 0.1rem;
+}
+.layout-view:hover .drag-submit,
+.layout-content-children:hover .layout-content-submit-container,
+.module-view:hover .module-view-submit-container {
+    display: block;
+}
+.module-view:hover {
+    background: rgb(222 243 255 / 15%);
+}
+.layout-container .layout-view:first-child {
+    margin-top: 0;
+}
+.layout-container .layout-view:last-child {
+    margin-bottom: 0;
+}
+.layout-container .drag-sort-dotted {
+    border-width: 0.2rem !important;
+}
+.layout-view-hidden .layout-content-submit {
+    background: #ffdddd !important;
+}
+.layout-view-hidden .layout-content {
+    border-color: #f00 !important;
+}
+
+/**
+ * 布局新添加的样式
+ */
+.layout-view-new {
+    border: 0.1rem solid #4caf50;
+    -webkit-box-shadow: 0 0px 0.4rem #4caf50;
+    box-shadow: 0 0px 0.4rem #4caf50;
+}
+
+/**
+ * 布局拖拽过程中经过的元素样式
+ */
+.layout-view-dragenter {
+    border: 0.2rem solid #2196f3;
+}
+.layout-view-dragenter .layout-view-dragenter-icon {
+    color: #2296f3;
+    display: block !important;
+    visibility: inherit !important;
+    position: absolute;
+    left: calc(50% - 0.8rem);
+    top: -1.3rem;
+}
+
+/**
+ * 模块
+ */
+.module-view-submit-container {
+    top: -0.1rem;
+    left: 0;
+}
+
+/**
+ * 模块拖拽过程中经过的元素样式
+ */
+.layout-content-dragenter {
+    border: 0.1rem dashed #2196f3;
+    -webkit-box-shadow: 0 0px 0.4rem #2196f3;
+    box-shadow: 0 0px 0.4rem #2196f3;
+}
+
+/**
+ * 颜色组件
+ */
+.colorpicker-submit {
+    background-color: #fff;
+}
+.colorpicker-submit img {
+    width: 1.4rem;
+    height: 1.4rem;
+    float: right;
+}
+
+/**
+ * 模块设置侧边栏
+ */
+.module-offcanvas-container .am-offcanvas-bar {
+    background: #fff;
+    width: 38rem;
+}
+.module-offcanvas-container .am-offcanvas-bar,
+.module-offcanvas-container .goods-search-container {
+    padding-bottom: 5.1rem;
+}
+.am-offcanvas.am-active .am-offcanvas-bar.am-offcanvas-bar-active {
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+}
+.module-offcanvas-container .am-offcanvas-content {
+    color: #666;
+    overflow: hidden;
+}
+.module-offcanvas-container .am-offcanvas-bar:after {
+    background: #ccc;
+}
+.module-offcanvas-container .am-form-group-refreshing {
+    padding: 0 0 1.5rem 0 !important;
+}
+.module-offcanvas-container .module-images-type-images-view,
+.module-offcanvas-container .module-slider-type-images-view {
+    padding: 0;
+}
+.module-offcanvas-container .am-offcanvas-content .am-panel {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.module-offcanvas-container .layout-style-background-images-view li,
+.module-offcanvas-container .module-images-type-images-view li,
+.module-offcanvas-container .module-slider-type-images-view li {
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
+.module-offcanvas-container .form-submit-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 37.9rem;
+    padding: 1rem;
+    border-top: 0.1rem solid #dfdfdf;
+    background: #f5f5f5;
+    z-index: 100;
+}
+.module-offcanvas-container .text-tips {
+    color: #ccc;
+}
+.module-offcanvas-container .am-tabs-d2 {
+    margin-bottom: 2rem;
+}
+.module-offcanvas-container .am-tabs-d2 .am-tabs-bd {
+    border: 0.1rem solid #ddd;
+    overflow: inherit;
+}
+.module-offcanvas-container .am-panel .am-panel-bd .am-form-group:last-child {
+    padding-bottom: 0.5rem !important;
+}
+
+/**
+ * 表单小组合组件
+ */
+.group-border-width input,
+.group-list-number-width input {
+    display: -webkit-inline-box;
+    text-align: center;
+}
+.group-border-width input {
+    width: 25% !important;
+}
+.group-list-number-width input {
+    width: 33.33% !important;
+}
+.group-list-number-width {
+    background: #ccc;
+}
+.group-list-number-width input:nth-child(3) {
+    border-right-width: 0px;
+}
+.group-border-width input:not(:first-child),
+.group-list-number-width input:not(:first-child),
+.group-border-radius-color .am-input-group-label {
+    border-left: 0;
+}
+.group-border-style .chosen-container {
+    width: 7rem !important;
+    display: block;
+    float: left;
+}
+.group-border-style .chosen-container:not(:last-child) {
+    margin-right: 0.4rem;
+}
+.group-text-align-style {
+    border: 0.1rem solid #ddd;
+    padding: 0.5rem 0.8rem;
+}
+@media only screen and (max-width: 640px) {
+    .group-border-style .chosen-container {
+        width: 5.9rem !important;
+    }
+}
+
+/**
+ * 链接地址选择
+ */
+.form-view-choice-container-active {
+    padding: 0.6rem;
+    border: 0.1rem solid #ccc;
+    cursor: pointer;
+}
+.form-view-choice-container-active .am-text-truncate {
+    max-width: 70%;
+    display: inline-block;
+    vertical-align: bottom;
+}
+.form-view-choice-container-active i:hover {
+    color: #f00;
+}
+.form-view-choice-container a {
+    color: #3bb4f2;
+    text-decoration: none;
+}
+.form-view-choice-container a:hover {
+    color: #2196f3;
+}
+
+/**
+ * 模块设置侧边栏 - 商品
+ */
+#offcanvas-module-config-goods .config-goods-list {
+
+}
+#offcanvas-module-config-goods .config-goods-list li {
+    float: left;
+    border: 0.1rem solid #eee;
+    position: relative;
+}
+#offcanvas-module-config-goods .config-goods-list li:hover {
+    border: 0.1rem solid #ccc;
+}
+#offcanvas-module-config-goods .config-goods-list li:not(:last-child) {
+    margin: 0 1.5rem 1.5rem 0;
+}
+#offcanvas-module-config-goods .config-goods-list li img {
+    width: 3.3rem;
+    height: 3.3rem;
+}
+#offcanvas-module-config-goods .config-goods-list li .am-close,
+#offcanvas-module-config-many-images .config-many-images-container .am-panel .am-close,
+#offcanvas-module-config-images-text .config-images-text-container .am-panel .am-close {
+    position: absolute;
+    top: -0.8rem;
+    right: -0.8rem;
+    width: 1.8rem;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    opacity: 1;
+}
+
+/**
+ * 模块设置侧边栏 - 视频
+ */
+#offcanvas-module-config-video ul.plug-file-upload-view-video li,
+#offcanvas-module-config-video ul.plug-file-upload-view li {
+    width: 100%;
+    height: auto;
+}
+
+/**
+ * 模块设置侧边栏 - 多图、图文
+ */
+#offcanvas-module-config-many-images .config-many-images-container .am-panel,
+#offcanvas-module-config-images-text .config-images-text-container .am-panel {
+    position: relative;
+}
+#offcanvas-module-config-many-images .config-many-images-container .am-panel .am-form-group:last-child,
+#offcanvas-module-config-images-text .config-images-text-container .am-panel .am-form-group:last-child {
+    padding-bottom: 0.5rem !important;
+}
+#offcanvas-module-config-images-text .config-images-text-container .am-panel .group-input-font-size {
+    width: 9.5rem;
+}
+
+/**
+ * 模块设置侧边栏 - 标题
+ */
+#offcanvas-module-config-title .config-title-container li {
+    position: relative;
+}
+#offcanvas-module-config-title .config-title-container li span {
+    width: calc(100% - 5.5rem);
+}
+#offcanvas-module-config-title .config-title-container li a.am-icon-edit,
+#offcanvas-module-config-title .config-title-container li a.am-icon-remove {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+}
+#offcanvas-module-config-title .config-title-container li a.am-icon-edit {
+    right: 3rem;
+}
+
+
+/**
+ * 页面选择
+ */
+#modal-module-pages-select .am-tabs-bd {
+    border-style: solid;
+    border-width: 0 0 0.1rem 0;
+    border-color: #eee;
+}
+#modal-module-pages-select .am-scrollable-vertical a {
+    text-decoration: none;
+    padding-right: 3rem;
+}
+#modal-module-pages-select .am-accordion-default {
+    margin: 0 0 1.5rem 0;
+}
+#modal-module-pages-select .am-accordion-default .am-accordion-title {
+    background: #f0f8ff;
+}
+#modal-module-pages-select .am-accordion-default:last-child {
+    margin-bottom: 0;
+}
+#modal-module-pages-select .am-tabs-bd ul {
+    margin-bottom: 0;
+}
+#modal-module-pages-select .am-tabs-bd ul li {
+    border-width: 0.1rem 0;
+}
+#modal-module-pages-select .am-tabs-bd ul li:last-child {
+    border-bottom: 0;
+}
+#modal-module-pages-select .am-tabs-bd ul.am-scrollable-vertical > li:first-child {
+    border-top: 0;
+}
+#modal-module-pages-select .am-tabs-bd ul li.active a {
+    background: #d2354c;
+    color: #fff;
+}
+#modal-module-pages-select .am-tabs-bd ul li.active a i {
+    display: block !important;
+    visibility: initial !important;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+#modal-module-pages-select .am-tabs-bd .content {
+    height: 30.8rem;
+}
+
+
+/**
+ * 商品添加-搜索列表
+ */
+.layout-forth-selection-container {
+    height: 100%;
+}
+.layout-forth-selection-container .forth-selection-container select.forth-selection-form-category {
+    display: -webkit-inline-box;
+}
+.layout-forth-selection-container .forth-selection-container .forth-selection-form-category, .forth-selection-container .chosen-container, .forth-selection-container .forth-selection-form-keywords {
+    width: calc(50% - 4.8rem) !important;
+}
+.layout-forth-selection-container .forth-selection-container .chosen-container, .forth-selection-container .forth-selection-form-keywords {
+    display: -webkit-inline-box !important;
+}
+.layout-forth-selection-container .forth-selection-container .chosen-single {
+    width: 100%;
+}
+.layout-forth-selection-container .forth-selection-container .search-submit {
+    width: 8.7rem;
+}
+.layout-forth-selection-container .goods-list-container {
+    height: calc(100% - 15.7rem);
+    border: 0.1rem solid #eee;
+}
+.layout-forth-selection-container .goods-list-container .am-gallery-bordered .am-gallery-title {
+    margin-top: 0.5rem;
+}
+.layout-forth-selection-container .goods-list-container ul li {
+    position: relative;
+    cursor: pointer;
+}
+.layout-forth-selection-container .goods-list-container ul li:hover .am-gallery-item {
+    -webkit-box-shadow: 0 0 0.6rem #3cb4f1;
+    box-shadow: 0 0 0.6rem #3cb4f1;
+}
+.layout-forth-selection-container .goods-list-container .icon-submit-container {
+    position: absolute;
+    right: 1.5rem;
+    bottom: 4.7rem;
+}
+.layout-forth-selection-container .goods-list-container .icon-submit-container .am-icon-btn {
+    width: 3.6rem;
+    height: 3.6rem;
+    line-height: 3.6rem;
+    font-size: 2rem;
+    -webkit-box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.5);
+}
+.layout-forth-selection-container .goods-list-container .am-icon-btn.am-success:hover {
+    background: #4CAF50;
+}
+.layout-forth-selection-container .goods-list-container .am-icon-btn.am-danger:hover {
+    background: #F44336;
+}
+.layout-forth-selection-container .goods-page-container {
+    height: 4rem;
+}
+.layout-forth-selection-container .goods-bottom-operate-container {
+    background: #f5f5f5;
+    border-top: 0.1rem solid #dedede;
+    position: fixed;
+    left: 0;
+    bottom: 2.5rem;
+    width: calc(100% - 5rem);
+    margin: 0 2.5rem;
+}
+
+/**
+ * 商品分类选择
+ */
+.layout-category-choice .goods-category-choice-content {
+    background: #f8f8f8;
+    border: 0.1rem solid #eee;
+}
+.layout-category-choice .goods-category-choice-content ul {
+    width: calc(33% - 1.5rem);
+    margin-bottom: 0;
+    height: 38rem;
+    background: #fff;
+    border: 0.1rem solid #dedede;
+}
+.layout-category-choice .goods-category-choice-content ul li {
+    border-width: 0.1rem 0;
+    border-top: 0;
+    margin-bottom: 0;
+}
+.layout-category-choice .goods-category-choice-content ul li:not(:nth-child(-n+7)):last-child {
+    border-bottom: 0;
+}
+.layout-category-choice .goods-category-choice-content ul li a {
+    text-decoration: none;
+}
+.layout-category-choice .goods-category-choice-content ul li.active a {
+    background: #d2354c;
+    color: #fff;
+}
+.layout-category-choice .goods-category-choice .already-select-tips {
+    padding: 1rem 1.5rem;
+    border: 0.1rem solid #ed7f5a;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: #fff4f0;
+    color: #ed7f5a;
+}
+.layout-category-choice .form-container-category .goods-category-choice-content {
+    padding: 1.5rem;
+    background: #fcfcfc;
+}
+.layout-category-choice .form-container-brand .goods-category-choice-content {
+    border: 0px;
+}
+.layout-category-choice .form-container-brand ul {
+    width: 100%;
+    height: 46.5rem;
+}
+@media only screen and (max-width: 640px) {
+    .layout-category-choice .form-container-category .goods-category-choice-content ul.am-margin-left-lg {
+        margin-left: 2rem;
+    }
+}
+
+/**
+ * 商品搜索弹窗
+ */
+#popup-module-goods-search .am-tabs-bd {
+    padding-bottom: 5rem;
+    z-index: 0;
+    border: 0;
+}
+
+/**
+ * 布局保存
+ */
+.page-top-nav-logo {
+    width: 3rem;
+    height: 3rem;
+    vertical-align: middle;
+}
+.layout-operate-container {
+    margin-right: 1rem;
+}
+.layout-operate-container .am-btn {
+    padding: 0.4rem 1rem;
+}

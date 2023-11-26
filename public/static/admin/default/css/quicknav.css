@@ -1,0 +1,12 @@
+/**
+ * 列表
+ */
+.nav-icon-circle {
+    width: 5rem;
+    height: 5rem;
+    text-align: center;
+    line-height: 5rem;
+}
+table.am-table .nav-icon-circle {
+    margin: 0 auto;
+}

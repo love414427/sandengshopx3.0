@@ -1,0 +1,348 @@
+/* 
+* 订单详情
+*/
+.index-order-detail .user-content {
+	padding: 0;
+}
+/**
+ * 进度
+ */
+ul.progress {
+	margin: 4rem 0 3.2rem 0;
+}
+ul.progress li {
+	position: relative;
+	width: 20%;
+}
+ul.progress li i.step {
+	display: block;
+	background-color: #e1e1e1;
+}
+ul.progress li .digital {
+	background-color: #FFFFFF;
+	border-radius: 50%;
+	width: 1.4rem;
+	height: 1.4rem;
+	border: 0.2rem solid #d8dadc;
+}
+ul.progress li .base .title {
+	font-size: 1.4rem;
+	color: #999999;
+}
+ul.progress li .base .date {
+	color: #999999;
+}
+ul.progress li.steps-success .digital {
+	border: 0.2rem solid var(--color-main) !important;
+	background-color: var(--color-main);
+}
+ul.progress li.steps-success i.step {
+	background-color: var(--color-main);
+}
+
+ul.progress li.steps-success + li i.step {
+	background-color: var(--color-main);
+}
+ul.progress li.steps-success + li .digital {
+	border-color: var(--color-main);
+}
+ul.progress li.steps-success + li .base .title {
+	color: var(--color-main);
+}
+ul.progress li.steps-success + li.steps-success .base .title {
+	color: #999999;
+}
+ul.progress-1 li {
+	width: 100%;
+}
+ul.progress-2 li {
+	width: 50%;
+}
+ul.progress-3 li {
+	width: 33.33%;
+}
+ul.progress-4 li {
+	width: 25%;
+}
+@media only screen and (min-width: 641px) {
+	ul.progress {
+		overflow: hidden;
+	}
+	ul.progress li {
+		float: left;
+		text-align: center;
+	}
+	ul.progress li i.step {
+		display: block;
+		height: 0.2rem;
+		width: 100%;
+		position: absolute;
+		margin: 0.6rem 0 0 -50%;
+		z-index: 1;
+	}
+	ul.progress li .digital {
+		position: absolute;
+		margin-left: calc(50% - 0.7rem);
+		z-index: 2;
+	}
+	ul.progress li .base {
+		margin-top: 2.7rem;
+	}
+}
+@media only screen and (max-width: 640px) {
+	ul.progress li {
+		width: 100%;
+	}
+	ul.progress li i.step {
+		height: 6rem;
+		width: 0.6rem;
+		margin-left: 0.4rem;
+	}
+
+	ul.progress li .base {
+		position: absolute;
+		left: 5rem;
+		top: 0;
+	}
+	ul.progress li:not(:first-child) .base {
+		margin-top: 5.5rem;
+	}
+}
+
+/**
+ * 文本列表
+ */
+.items {
+	font-size: 1.4rem;
+	line-height: 3rem;
+	overflow: hidden;
+}
+.items-title {
+	color: #999999;
+	width: 8.5rem;
+}
+.items-title.am-color-main {
+	color: var(--color-main);
+}
+.items-detail .am-view-map {
+	background: #FFFFFF;
+	color: #0c7cd5;
+	font-size: 1.4rem;
+	box-shadow: none;
+}
+.items-detail .am-view-map:hover {
+	opacity: 0.7;
+}
+/**
+ * 订单详情基础
+ */
+ .user-content .am-panel {
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	border: 0;
+	margin: 0;
+}
+.user-content .am-panel-default > .am-panel-hd {
+	background-color: var(--body-bg-color);
+	border-radius: var(--border-radius);
+	padding: 0.6rem 1.6rem;
+	font-size: 1.6rem;
+	font-weight: 500;
+}
+.user-content .am-panel-bd {
+	padding: 2.4rem;
+}
+
+.order-state .operation {
+	margin-top: 1.6rem;
+}
+.order-state .operation .am-btn {
+	margin-right: 1.2rem;
+}
+
+/**
+ * 虚拟销售
+ */
+.fictitious-panel-container ul.am-list li {
+	border: 0 !important;
+	border-bottom: 0.1rem solid #EEE !important;
+}
+.fictitious-panel-container ul.am-list li:last-child {
+	border-bottom: 0 !important;
+	margin: 0;
+	padding: 0;
+}
+.order-virtually .am-list > li:hover {
+	background-color: transparent;
+}
+.order-virtually li {
+	display: flex;
+	flex-direction: row;
+	padding: 0 0 2rem 0;
+	margin-bottom: 2rem;
+}
+.order-virtually li .virtually-left {
+	width: 8rem;
+	height: 8rem;
+	overflow: hidden;
+	flex-shrink: 0;
+}
+.order-virtually li .virtually-left img {
+	width: 100%;
+}
+.order-virtually li .virtually-right {
+	width: 100%;
+	word-break: break-word;
+}
+
+/**
+ * 自提
+ */
+.order-state .extraction-take-container p > img {
+	background: transparent;
+	border: 0;
+}
+.order-state .extraction-take-container .extraction-take-title {
+	color: #0c7cd5;
+}
+
+/**
+ * 订单提示
+ */
+.order-state .am-alert {
+	min-width: 50%;
+	max-width: 100%;
+	display: table;
+	font-size: 1.4rem;
+	padding: 0.7rem 1.2rem;
+	border-radius: var(--border-radius-sm);
+	border: 0;
+	position: relative;
+}
+.order-state .am-alert-primary {
+	background: rgba(12, 124, 213, 0.08);
+	color: #0c7cd5;
+}
+@media only screen and (max-width: 640px) {
+	.order-state .am-alert {
+		width: 100%;
+	}
+}
+
+/**
+ * 订单列表
+ */
+.order-goods table thead {
+	background: var(--body-bg-color);
+	font-size: 1.4rem;
+}
+.order-goods table thead tr th {
+	border-radius: var(--border-radius);
+	color: #999999;
+	padding: 0.6rem;
+	border: 0;
+}
+.order-goods table thead tr th:first-of-type {
+	text-align: left;
+	font-weight: 500;
+	font-size: 1.6rem;
+	padding-left: 1.6rem;
+	color: #333333;
+}
+.order-goods table tbody tr td {
+	padding: 2rem 1rem;
+	border-top: 0;
+	border-bottom: 0.1rem solid #EEEEEE;
+	width: 16%;
+}
+.order-goods table tbody tr td:first-of-type {
+	padding-left: 2.4rem;
+	width: 52%;
+}
+.order-goods table tbody tr td:last-of-type {
+	padding-right: 2.4rem;
+}
+.order-goods .goods-shop-info {
+	display: flex;
+	flex-wrap: nowrap;
+}
+.order-goods .goods-shop-info-left {
+	width: 8rem;
+	height: 8rem;
+	display: inline-block;
+	flex-shrink: 0;
+}
+.order-goods .goods-shop-info-left img {
+	width: 100%;
+}
+.order-goods .goods-shop-info-right {
+	width: 100%;
+	margin-top: 1.1rem;
+	margin-left: 1.6rem;
+	position: relative;
+}
+.order-goods .goods-shop-info-right > a {
+	display: block;
+	height: 4rem;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	padding-right: 10rem;
+}
+.order-goods .goods-shop-info-right .goods-shop-info-opration {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.order-goods .goods-shop-info-right .goods-shop-info-desc {
+	margin-top: 0.8rem;
+}
+.order-goods .goods-shop-info-right .am-text-primary {
+	color: #0c7cd5;
+}
+.order-goods .price > p:first-of-type,
+.order-goods .number > span:first-of-type,
+.order-goods .price > span:first-of-type {
+	margin-top: 1.1rem;
+	display: block;
+}
+.order-goods .price .line-price {
+	font-weight: 400;
+	color: #333333;
+}
+/* 
+* 积分折扣
+*/
+.order-point-discount {
+	padding: 0 2.4rem;
+}
+.order-point-discount .items {
+	padding: 0.2rem 2rem;
+}
+.order-point-discount .items .items-title {
+	width: auto;
+	text-align: right;
+	color: var(--color-yellow);
+	float: right;
+}
+.order-point-discount .items .items-detail {
+	min-width: 10rem;
+	text-align: right;
+	color: var(--color-yellow);
+	float: right;
+}
+/* 
+* 结算
+*/
+.order-total {
+	padding: 0.8rem 4.4rem 2rem 2rem;
+}
+.order-total .items .items-title {
+	width: auto;
+	text-align: right;
+	float: right;
+}
+.order-total .items .items-detail {
+	min-width: 10rem;
+	text-align: right;
+	float: right;
+}
